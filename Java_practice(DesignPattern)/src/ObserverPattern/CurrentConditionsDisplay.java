@@ -3,25 +3,26 @@ package ObserverPattern;
 public class CurrentConditionsDisplay implements Observer, Display {
 	private float temperature;
 	private float humidity;
-	private float pressure;
-	private WheatherData wheatherData;
+	private WeatherData weatherData;
 	
-	public CurrentConditionsDisplay(WheatherData wheatherdata) {
+	public CurrentConditionsDisplay(WeatherData weatherdata) {
 		// TODO Auto-generated constructor stub
-		this.wheatherData = wheatherdata; 
-		wheatherData.registerObserver(this);
+		this.weatherData = weatherdata;
+		weatherdata.registerObserver(this);
 	}
 
 	@Override
 	public void display() {
-		// TODO Auto-generated method stub
-
+		// TODO Auto-generated method stub\
+		System.out.println("현재 상태 : " + "온도 " + temperature + "F, " + humidity + "%");
 	}
 
 	@Override
-	public void update(float temp, float humdity, float pressure) {
+	public void update() {
 		// TODO Auto-generated method stub
-
+		temperature = weatherData.getTempData();
+		humidity = weatherData.getHumidityData();
+		display();
 	}
 
 }
