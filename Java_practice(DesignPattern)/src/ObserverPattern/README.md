@@ -24,7 +24,6 @@
 	-따라서 유연성을 위해서 List타입으로 선언하는 것이 더 좋다. 
 
 2. float와 double형의 차이점   
-
 	float와 double형은 둘다 실수를 나타내는데 왜 다르게 쓰일까 단순히 메모리 사용량 때문일까 고민했다. 
 	- 크기 
 	 float : 4바이트, 	double : 8바이트
@@ -48,7 +47,7 @@
 	처음에 프로그램을 작성할 때에는 update()추상메서드를 정의할 때, 
 	public void update(float temp, float humidity, float pressure);
 	이렇게 정의했었는데 각 display 클래스 별로 필요로 하는 기상데이터들이 달랐다.
-	그리고 display를 호출할 떄마다 불필요한 데이터까지 가져올 필요는 없으므로,   
+	그리고 display를 호출할 때마다 불필요한 데이터까지 가져올 필요는 없으므로,   
 	풀(pull)방식으로 내가 필요한 데이터만 가져오는 getter메서드를 구현하여 프로그램을 완성했다. 
 
 
