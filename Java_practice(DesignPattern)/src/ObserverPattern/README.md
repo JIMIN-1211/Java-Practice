@@ -7,6 +7,7 @@
 
 ## 설치 및 사용법
 1. 	이 프로젝트를 로컬로 클론하거나 다운로드합니다. 
+
 	```bash
 	git clone https://github.com/JIMIN-1211/WeatherApp.git
 	cd WeatherApp
