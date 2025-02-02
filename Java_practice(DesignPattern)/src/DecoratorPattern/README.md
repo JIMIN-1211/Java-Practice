@@ -10,7 +10,7 @@
 
 
 	```bash
-	git clone https://github.com/JIMIN-1211/WeatherApp.git
+	git clone https://github.com/JIMIN-1211/DecoratorPattern.git
 	cd WeatherApp
 
 ## 주요 기능
