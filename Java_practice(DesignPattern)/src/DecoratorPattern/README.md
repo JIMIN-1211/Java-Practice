@@ -11,7 +11,7 @@
 
 	```bash
 	git clone https://github.com/JIMIN-1211/DecoratorPattern.git
-	cd WeatherApp
+	cd DecoratorPattern
 
 ## 주요 기능
 - 원하는 음료를 주문하고, 값을 계산할 수 있다. 
