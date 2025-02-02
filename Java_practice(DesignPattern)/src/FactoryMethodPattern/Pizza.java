@@ -15,7 +15,7 @@ public abstract class Pizza {
 		System.out.println("소스를 뿌리는 중 ...");
 		System.out.println("토핑을 올리는 중 ...");
 		for(String topping : toppings) {
-			System.out.println(topping);
+			System.out.println(" "+topping);
 		}
 	}
 	
@@ -29,6 +29,10 @@ public abstract class Pizza {
 	
 	public void cut() {
 		System.out.println("피자를 사선으로 자르기");
+	}
+
+	public String getName() {
+		return name;
 	};
 	
 }
