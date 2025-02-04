@@ -10,8 +10,8 @@
 
 
 	```bash
-	git clone https://github.com/JIMIN-1211/DecoratorPattern.git
-	cd DecoratorPattern
+	git clone https://github.com/JIMIN-1211/FactoryMethodPattern.git
+	cd FactoryMethodPattern
 
 ## 주요 기능
 - 뉴욕 스타일 피자를 주문하고 싶으면 해당 지점에서 피자를 주문하면 치즈 피자를 주문하더라도 뉴욕식 피자를 만들어서 제공해준다. 
