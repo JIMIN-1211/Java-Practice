@@ -27,7 +27,7 @@ Decoration 추상 클래스가 Beverage 추상클래스를 상속해서 getDescription()일반 메�
 		Beverage beverage;
 	
 		public abstract String getDescription();
-		//Beverage클래스의 일반 메서드를 추상메서드로 오버라이딩
+		//Beverage클래스의 일반 메서드를 추상메서드로 추상화
 		
 	}
 
