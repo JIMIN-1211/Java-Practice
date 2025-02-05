@@ -19,7 +19,12 @@ public class ClamPizza extends Pizza {
 		cheese = pizzaIngredientFactory.createCheese();
 		clam = pizzaIngredientFactory.createClams();
 
-		System.out.print("재료 : "+dough+", "+sauce+", "+cheese+", "+clam);
+		System.out.print("재료 : "+dough+", "+sauce+", "+clam);
+		for(Cheese cheese : cheese) {
+			System.out.print(", ");
+			System.out.print(cheese);
+		}
+		System.out.println("");
 		
 	}
 

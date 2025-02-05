@@ -21,11 +21,16 @@ public class PepperoniPizza extends Pizza {
 		veggies = pizzaIngredientFactory.createVeggies(selectedVeggies);
 		pepperoni = pizzaIngredientFactory.createPepperoni();
 
-		System.out.print("재료 : "+dough+", "+sauce+", "+cheese+", "+pepperoni+", ");
-		for(Veggies veggie : veggies) {
-			System.out.print(veggie);
+		System.out.print("재료 : "+dough+", "+sauce+", "+pepperoni);
+		for(Cheese cheese : cheese) {
 			System.out.print(", ");
+			System.out.print(cheese);
 		}
+		for(Veggies veggie : veggies) {
+			System.out.print(", ");
+			System.out.print(veggie);
+		}
+		System.out.println("");
 	}
 
 }

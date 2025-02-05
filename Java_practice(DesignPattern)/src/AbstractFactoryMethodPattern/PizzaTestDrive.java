@@ -8,10 +8,10 @@ public class PizzaTestDrive {
 		PizzaStore chicagoStore = new ChicagoPizzaStore();
 		Pizza pizza;
 		
-		pizza = nyStore.orderPizza("cheese");
+		pizza = nyStore.orderPizza("veggie");
 		System.out.println(pizza.getName()+" 완성!");
 		
-		pizza = chicagoStore.orderPizza("cheese");
+		pizza = chicagoStore.orderPizza("pepperoni");
 		System.out.println(pizza.getName()+" 완성");
 		
 	}

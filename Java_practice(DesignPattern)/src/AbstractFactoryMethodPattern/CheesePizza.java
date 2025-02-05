@@ -21,11 +21,17 @@ public class CheesePizza extends Pizza {
 		cheese = pizzaIngredientFactory.createCheese();
 		veggies = pizzaIngredientFactory.createVeggies(selectedVeggies);
 		
-		System.out.print("재료 : "+dough+", "+sauce+", "+cheese+", ");
-		for(Veggies veggie : veggies) {
-			System.out.print(veggie);
+		System.out.print("재료 : "+dough+", "+sauce);
+		for(Cheese cheese : cheese) {
 			System.out.print(", ");
+			System.out.print(cheese);
 		}
+		for(Veggies veggie : veggies) {
+			System.out.print(", ");
+			System.out.print(veggie);	
+		}
+		
+		System.out.println("");
 		
 	}
 
