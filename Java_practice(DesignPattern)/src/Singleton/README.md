@@ -117,7 +117,7 @@ CPU에 모든 정보를 저장해서 바로 불러올 수 있으면 가장 이상적이겠지만, CPU는 연산
 
 따라서 인스턴스 변수를 선언할 때 volatile키워드를 추가하여 선언한다. 
 
-	3) DCL(Double-Check-Locking) 방식을 통해 인스턴스를 생성할 때만 동기화 하기
+3) DCL(Double-Check-Locking) 방식을 통해 인스턴스를 생성할 때만 동기화 하기
 	
 	```Java
 	public class ChocolateBoiler{
