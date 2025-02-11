@@ -67,7 +67,7 @@ __해결법__ : 한 쓰레드가 작업을 진행할 때 다른 쓰레드에게 대기를 명령한다 ==> __
 
 synchronized : 최초로 해당 메서드를 호출한 쓰레드가 종료될 때까지 다른 스레드가 접근하지 못하도록 'lock'을 건다. 
 
-1) getInstance()의 속도가 그리 중요하지 않은 경우
+__1) getInstance()의 속도가 그리 중요하지 않은 경우__
 
 	```Java
 	public static ChocolateBoiler synchronized getInstatnce() {
@@ -77,7 +77,7 @@ synchronized : 최초로 해당 메서드를 호출한 쓰레드가 종료될 때까지 다른 스레드가 
 		return instance;
 	}
 	
-2) 인스턴스를 꼭 써야 하는 경우 
+__2) 인스턴스를 꼭 써야 하는 경우 __
 
 	```Java
 	public class ChocolateBoiler {
@@ -117,7 +117,7 @@ CPU에 모든 정보를 저장해서 바로 불러올 수 있으면 가장 이상적이겠지만, CPU는 연산
 
 따라서 인스턴스 변수를 선언할 때 volatile키워드를 추가하여 선언한다. 
 
-3) DCL(Double-Check-Locking) 방식을 통해 인스턴스를 생성할 때만 동기화 하기
+__3) DCL(Double-Check-Locking) 방식을 통해 인스턴스를 생성할 때만 동기화 하기__
 	
 	```Java
 	public class ChocolateBoiler{
@@ -142,8 +142,9 @@ CPU에 모든 정보를 저장해서 바로 불러올 수 있으면 가장 이상적이겠지만, CPU는 연산
 <img src="https://velog.velcdn.com/images/kssumin/post/038b2556-a505-4f4f-9780-005dc1022b05/image.png" width="400px"></img>
 
 ### 3. LazyHolder(중첩클래스)
+싱글턴 클래스에 중첩하여 정적 클래스를 만든다.   
 JVM은 클래스를 로딩할 때 static inner class는 바로 생성하지 않는다.   
-즉 싱글턴 클래스에 중첩하여 정적 클래스를 만든다. 이때 이 중첩 클래스는 인스턴스를 생성하는 클래스로   
+이때 이 중첩 클래스는 인스턴스를 생성하는 클래스이므로    
 인스턴스 생성이 필요할 때로 인스턴스 초기화(생성)을 미룬다. 
 
 	```Java
@@ -164,13 +165,13 @@ JVM은 클래스를 로딩할 때 static inner class는 바로 생성하지 않는다.
 __성능이 중요시 되는 환경의경우 LazyHolder방식을 이용해서 싱글턴을 구현할 수 있다.__
 
 ### 4. Enum
-stack 영역 : 메서드내에서 정의하는 기본 자료형 즉 int, double , boolean, long, byte등에 해당하는 지역변수의 데이터 값이 저장되는 공간이다. 그리고 object타입의 데이터의 __참조값__ 을 저장한다.
-heap 영역 : string과 같은 object타입의 __데이터__ 가 저장되는 공간이다.   
+- stack 영역 : 메서드내에서 정의하는 기본 자료형 즉 int, double , boolean, long, byte등에 해당하는 지역변수의 데이터 값이 저장되는 공간이다. 그리고 object타입의 데이터의 __참조값__ 을 저장한다.
+- heap 영역 : string과 같은 object타입의 __데이터__ 가 저장되는 공간이다.   
 
 stack은 함수가 호출될 때 사용하는 메모리이고, 기능 수행이 끝나면 메모리는 해제된다.   
 heap은 자동으로 관리가 되지 않기 때문에 JVM의 가비지 컬렉터가 주기적으로 메모리 정리를 실행해준다. 
 
-enum : 열거형 즉 서로 연관된 상수들의 집합이면서 일종의 클래스로 쓰인다. 따라서 생성자와 메서드도 가질 수 있다.   
+- enum : 열거형 즉 서로 연관된 상수들의 집합이면서 일종의 클래스로 쓰인다. 따라서 생성자와 메서드도 가질 수 있다.   
 
 enum은 고정된 상수들의 집합이므로 런타임(실행되고 있는 시점)이 아닌 '컴파일 시점'(컴파일하는 시점)에 모든 값을 알고 있어야 한다.   
 즉 생성자가 private으로 제한된다. --> 컴파일 하는 시점에서 이미 모든 값이 고정되어 있어야 하므로 생성자를 접근할 수 없도록 private으로 제한     
