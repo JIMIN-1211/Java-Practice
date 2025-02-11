@@ -2,7 +2,7 @@ package Singleton;
 
 public enum EnumChocolateBoiler {
 	// 2. 동기화문제, 클래스 로딩 문제, 리플렉션, 직렬화 역직렬화 문제 등을 모두 해결 가능한 enum클래스 사용
-	ENUM_INSTANCE;// == public static final ChcolateBoiler INSTANCE = new ChocolateBoiler();
+	ENUM_INSTANCE;// == public static final ChcolateBoiler ENUM_INSTANCE = new ChocolateBoiler();
 	private boolean empty;
 	private boolean boiled;
 	
